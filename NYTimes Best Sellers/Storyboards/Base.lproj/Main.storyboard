@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Books View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BooksViewController" customModule="NYTimes_Best_Sellers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ixf-EJ-vh9">
+                                <rect key="frame" x="82" y="64" width="250" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="sKe-ft-6xL"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Ranking"/>
+                                    <segment title="Weeks on List"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didTapSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="NYl-1d-6ke"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25Z-NN-X5O">
+                                <rect key="frame" x="382" y="68.5" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="l27-Vy-ST0"/>
+                                    <constraint firstAttribute="width" constant="22" id="vk0-yS-2CN"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Button" image="arrow.clockwise" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapReload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cxy-HY-F7b"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="192" estimatedRowHeight="192" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFm-vr-WRq">
+                                <rect key="frame" x="0.0" y="103" width="414" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="25Z-NN-X5O" firstAttribute="centerY" secondItem="ixf-EJ-vh9" secondAttribute="centerY" id="Hee-Fg-e2Z"/>
+                            <constraint firstItem="ixf-EJ-vh9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JNi-Bf-Bb8"/>
+                            <constraint firstItem="iFm-vr-WRq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PpT-Cc-tnD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="25Z-NN-X5O" secondAttribute="trailing" constant="10" id="YRb-pA-LML"/>
+                            <constraint firstItem="iFm-vr-WRq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fIv-gD-5qj"/>
+                            <constraint firstItem="iFm-vr-WRq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gxg-cD-Ecp"/>
+                            <constraint firstItem="iFm-vr-WRq" firstAttribute="top" secondItem="ixf-EJ-vh9" secondAttribute="bottom" constant="8" id="k0a-aZ-rM0"/>
+                            <constraint firstItem="ixf-EJ-vh9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nPr-eE-wYo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="iFm-vr-WRq" id="GmZ-9B-E0S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+    </resources>
+</document>
