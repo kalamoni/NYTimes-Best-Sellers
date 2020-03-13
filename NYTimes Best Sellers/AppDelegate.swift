@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  NYTimes Best Sellers
 //
-//  Created by Omar Sherif on 3/12/20.
+//  Created by Mohamed Salama on 3/12/20.
 //  Copyright © 2020 Mohamed Salama. All rights reserved.
 //
 
